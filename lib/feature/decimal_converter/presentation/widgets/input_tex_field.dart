@@ -76,7 +76,7 @@ class InputTextField extends StatelessWidget {
                         color: errorText == null
                             ? AppColors.checkCircleColor
                             : AppColors.errorColor,
-                        shape: ToolTipCustomShape(),
+                        shape: const ToolTipCustomShape(),
                       ),
                       triggerMode: TooltipTriggerMode.manual,
                       key: tooltipkey,
@@ -118,7 +118,7 @@ class InputTextField extends StatelessWidget {
                   ),
                 ),
               ),
-              style: TextStyle(
+              style: const TextStyle(
                 color: AppColors.primaryColorDark,
               ),
               keyboardType: keyboardType,

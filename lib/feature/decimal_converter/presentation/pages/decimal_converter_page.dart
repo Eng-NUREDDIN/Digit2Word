@@ -24,9 +24,8 @@ class DecimalConverterPage extends StatelessWidget {
       appBar: AppBar(
           title: const Text(AppString.appName),
           backgroundColor: AppColors.primaryColor),
-      body: BlocBuilder<DecimalConverterBloc, DecimalConverterState>(
-        builder: (context, state) {
-          return Column(
+      body:
+           Column(
             children: [
               AppTextBox(
                   text: AppLocalization.of(context).translate('introduction')),
@@ -37,20 +36,30 @@ class DecimalConverterPage extends StatelessWidget {
                 labelText: AppLocalization.of(context).translate('input'),
                 keyboardType: TextInputType.number,
               ),
-              WordOutputTextField(
-                  text: state is DecimalConverter ? state.words : '',
-                  textLabel: AppLocalization.of(context).translate('output')),
-              AppButton(
-                  text: AppLocalization.of(context).translate('convert'),
-                  onPressed: () {
-                    context
-                        .read<DecimalConverterBloc>()
-                        .add(ConvertDecimalToWords(inputController.text));
-                  })
+              BlocBuilder<DecimalConverterBloc, DecimalConverterState>(
+                builder: (context, state) {
+                  return Column(
+                    children: [
+                      WordOutputTextField(
+                          text: state is DecimalConverter ? state.words : '',
+                          textLabel: AppLocalization.of(context).translate(
+                              'output')),
+                      AppButton(
+                          text: AppLocalization.of(context).translate(
+                              'convert'),
+                          onPressed: () {
+                            context
+                                .read<DecimalConverterBloc>()
+                                .add(
+                                ConvertDecimalToWords(inputController.text));
+                          })
+                    ],
+                  );
+                },
+              )
             ],
-          );
-        },
-      ),
+          ),
+
     );
   }
 }

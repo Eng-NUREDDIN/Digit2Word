@@ -9,6 +9,6 @@ class AppColors {
   static const Color primaryTextColor = Color(0xFF212121);
   static const Color checkCircleColor = Color(0xFF00C853);
   static const Color errorColor = Color(0xFFD50000);
-  static const Color inputText = Color(0x0fff58d16);
+  static const Color inputText = Color(0xfff58d16);
   static const Color white = Colors.white;
 }

@@ -61,9 +61,9 @@ Map<String, Map<String, String>> translateMap = {
   },
   "introduction": {
     'en':
-        'Please enter an INTEGER number in the \"Input\" box and tap on \"convert\" to see the equivalent in words appear in the \"Output\" box.',
+        'Please enter an INTEGER number in the "Input" box and tap on "convert" to see the equivalent in words appear in the "Output" box.',
     'tr':
-        "Lütfen \"Giriş\" kutusuna bir TAMSAYI girin ve \"Çevir\" e dokunun, eşdeğerinin kelimelerde görünmesi için \"Çıktı\" kutusunda görünür.",
+        'Lütfen "Giriş" kutusuna bir TAMSAYI girin ve "Çevir" e dokunun, eşdeğerinin kelimelerde görünmesi için "Çıktı" kutusunda görünür.',
   },
   "input": {
     'en': "Input",
