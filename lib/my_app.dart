@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
           title: AppString.appName,
           // here we can customize our application more with routes and themes ..etc.
           //for example://routes: RoutesManager.allRoutes(),theme: ThemeManager.theme(),
-          routes: RoutesManager.allRoutes()
-      ),
+          routes: RoutesManager.allRoutes()),
     );
   }
 }

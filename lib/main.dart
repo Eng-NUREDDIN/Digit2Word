@@ -7,5 +7,3 @@ void main() {
   // we can add more options here like analytics, crashlytics, service locator, etc
   runApp(MyApp.instance);
 }
-
-

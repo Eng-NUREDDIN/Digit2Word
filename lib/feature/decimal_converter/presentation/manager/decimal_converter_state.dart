@@ -8,5 +8,5 @@ class DecimalConverter extends DecimalConverterState {
   final String words;
   const DecimalConverter(this.words);
   @override
-  List<Object> get props => [ words ];
+  List<Object> get props => [words];
 }

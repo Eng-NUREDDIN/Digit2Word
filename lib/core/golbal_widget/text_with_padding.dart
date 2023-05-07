@@ -6,12 +6,13 @@ class TextWithPadding extends StatelessWidget {
   final String labelText;
   final double padding;
 
-  const TextWithPadding({super.key, required this.labelText, this.padding = 0.03});
+  const TextWithPadding(
+      {super.key, required this.labelText, this.padding = 0.03});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.all(context.width(padding)),
+      padding: EdgeInsets.all(context.width(padding)),
       child: Text(
         labelText,
         style: const TextStyle(

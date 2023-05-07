@@ -3,8 +3,9 @@ part of 'decimal_converter_bloc.dart';
 abstract class DecimalConverterEvent extends Equatable {
   const DecimalConverterEvent();
 }
+
 class ConvertDecimalToWords extends DecimalConverterEvent {
-  final int decimal;
+  final String decimal;
 
   const ConvertDecimalToWords(this.decimal);
 

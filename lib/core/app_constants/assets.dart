@@ -3,5 +3,4 @@ class Assets {
   Assets._();
 
   static const String jpgNumbersFeat = 'assets/images/jpg/numbers_feat.jpg';
-
 }

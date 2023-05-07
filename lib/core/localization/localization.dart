@@ -15,9 +15,9 @@ class AppLocalization {
 
   static AppLocalization of(BuildContext context) =>
       Localizations.of<AppLocalization>(context, AppLocalization) ??
-          AppLocalization(const Locale('en'));
+      AppLocalization(const Locale('en'));
   static const LocalizationsDelegate<AppLocalization> delegate =
-  _AppLocalizationDelegate();
+      _AppLocalizationDelegate();
 
   String translate(String key, {String nullCase = ""}) {
     return (translateMap[key] ?? {})[languageCode] ?? nullCase;
@@ -47,30 +47,30 @@ Map<String, Map<String, String>> translateMap = {
     'en': "Home Page",
     'tr': "Ana Sayfa",
   },
-  "enterNumber":{
+  "enterNumber": {
     'en': "Enter A Number",
     'tr': "Numara Giriniz",
   },
-  "convert":{
+  "convert": {
     'en': "Convert",
     'tr': "Çevir",
   },
-  "result":{
+  "result": {
     'en': "Output",
     'tr': "Sonuç",
   },
-  "introduction":{
-    'en': 'Please enter an INTEGER number in the \"Input\" box and tap on \"convert\" to see the equivalent in words appear in the \"Output\" box.',
-    'tr': "Lütfen \"Giriş\" kutusuna bir TAMSAYI girin ve \"Çevir\" e dokunun, eşdeğerinin kelimelerde görünmesi için \"Çıktı\" kutusunda görünür.",
+  "introduction": {
+    'en':
+        'Please enter an INTEGER number in the \"Input\" box and tap on \"convert\" to see the equivalent in words appear in the \"Output\" box.',
+    'tr':
+        "Lütfen \"Giriş\" kutusuna bir TAMSAYI girin ve \"Çevir\" e dokunun, eşdeğerinin kelimelerde görünmesi için \"Çıktı\" kutusunda görünür.",
   },
-  "input":{
+  "input": {
     'en': "Input",
     'tr': "Giriş",
   },
-  "output":{
+  "output": {
     'en': "Output",
     'tr': "Çıktı",
   },
-
-
 };

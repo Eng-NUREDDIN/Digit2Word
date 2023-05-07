@@ -1,5 +1,3 @@
-class RoutesName{
-
+class RoutesName {
   static const String home = '/';
-
 }

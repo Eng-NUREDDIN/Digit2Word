@@ -1,6 +1,6 @@
 import 'package:digit_words/core/golbal_widget/app_button.dart';
 import 'package:digit_words/core/localization/localization.dart';
-import 'package:digit_words/core/number_converter_logic/number_converter.dart';
+
 import 'package:digit_words/core/utils/app_colors.dart';
 import 'package:digit_words/core/utils/app_string.dart';
 import 'package:digit_words/core/utils/validator.dart';
@@ -21,30 +21,32 @@ class DecimalConverterPage extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       drawer: const Drawer(),
       backgroundColor: AppColors.backgroundColor,
-      appBar: AppBar(title: const Text(AppString.appName),
+      appBar: AppBar(
+          title: const Text(AppString.appName),
           backgroundColor: AppColors.primaryColor),
-      body: BlocBuilder<DecimalConverterBloc,DecimalConverterState >(
+      body: BlocBuilder<DecimalConverterBloc, DecimalConverterState>(
         builder: (context, state) {
           return Column(
             children: [
               AppTextBox(
                   text: AppLocalization.of(context).translate('introduction')),
               InputTextField(
-                validator: (value)=>Validator.notNumberValidator(value),
+                validator: (value) => Validator.notNumberValidator(value),
                 controller: inputController,
                 hintText: AppLocalization.of(context).translate('enterNumber'),
                 labelText: AppLocalization.of(context).translate('input'),
                 keyboardType: TextInputType.number,
               ),
-              WordOutputTextField(text:state is DecimalConverter? state.words : '',
+              WordOutputTextField(
+                  text: state is DecimalConverter ? state.words : '',
                   textLabel: AppLocalization.of(context).translate('output')),
-              AppButton(text: AppLocalization.of(context).translate('convert'),
+              AppButton(
+                  text: AppLocalization.of(context).translate('convert'),
                   onPressed: () {
-                context.read<DecimalConverterBloc>().add(ConvertDecimalToWords(int.parse(inputController.text)));
-
-                  }
-                  )
-
+                    context
+                        .read<DecimalConverterBloc>()
+                        .add(ConvertDecimalToWords(inputController.text));
+                  })
             ],
           );
         },

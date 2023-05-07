@@ -16,7 +16,7 @@ class WordOutputTextField extends StatelessWidget {
     return Container(
       height: context.width(0.6),
       margin: const EdgeInsets.all(15),
-      decoration:  const BoxDecoration(
+      decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),
         image: DecorationImage(
           opacity: 0.1,
@@ -28,13 +28,12 @@ class WordOutputTextField extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextWithPadding(labelText: textLabel),
-
           Expanded(
             child: Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-               border: Border.all(color: AppColors.primaryColorDark),
+                border: Border.all(color: AppColors.primaryColorDark),
               ),
               width: context.width(0.9),
               height: context.width(0.3),

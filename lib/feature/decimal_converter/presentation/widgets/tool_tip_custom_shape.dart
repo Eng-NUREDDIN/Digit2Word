@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class ToolTipCustomShape extends ShapeBorder {
   final bool usePadding;
 
@@ -18,9 +19,9 @@ class ToolTipCustomShape extends ShapeBorder {
     return Path()
       ..addRRect(
           RRect.fromRectAndRadius(rect, Radius.circular(rect.height / 2)))
-      ..moveTo(rect.bottomRight.dx -(rect.right*0.25) , rect.bottomCenter.dy)
-      ..relativeLineTo(rect.right-(rect.width*0.95), 20)
-      ..relativeLineTo(rect.right-(rect.width*0.95), -20)
+      ..moveTo(rect.bottomRight.dx - (rect.right * 0.23), rect.bottomCenter.dy)
+      ..relativeLineTo(rect.right - (rect.width * 0.95), 20)
+      ..relativeLineTo(rect.right - (rect.width * 0.95), -20)
       ..close();
   }
 

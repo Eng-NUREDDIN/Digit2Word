@@ -1,4 +1,4 @@
-class Validator{
+class Validator {
   // not number validator
   static String? notNumberValidator(String? value) {
     if (value == null || value.isEmpty) {
